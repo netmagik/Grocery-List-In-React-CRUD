@@ -10,4 +10,4 @@ CRUD Grocery List in React, using Hooks
 ## Built With
 - [React](https://reactjs.org/)
 - [create-react-app](https://github.com/facebook/create-react-app)
-- [styled-components](https://www.styled-components.com)
+- [Using Tutorial from Tania Rascia](https://www.taniarascia.com/crud-app-in-react-with-hooks/)
