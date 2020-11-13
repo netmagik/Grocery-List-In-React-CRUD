@@ -1,7 +1,8 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useEffect } from 'react';
 import GroceryList from './tables/GroceryList';
 import AddItemForm from './forms/AddItemForm';
 import EditItemForm from './forms/EditItemForm';
+import sampleProducts from './sample-products';
 
 const App = () => {
   const groceryData = [
@@ -17,11 +18,10 @@ const App = () => {
 
   const initialFormState = { id: null, name: '', quantity: ''};
 
-
   const [items, setItems] = useState(groceryData);
   const [editing, setEditing] = useState(false);
   const [currentItem, setCurrentItem]= useState(initialFormState);
-
+  
   // See and update what the current item being edited is:
   const editRow = (item) => {
     setEditing(true)
@@ -42,11 +42,24 @@ const App = () => {
     setItems([...items, item])
   }
 
+
   // Delete Item
   const deleteItem = (id) => {
     setEditing(false)
     setItems(items.filter((item) => item.id !== id))
   }
+
+  // Load Products
+  const loadSampleProducts = () => {
+    const newItems = items.concat(sampleProducts)
+    setItems(newItems);
+  }
+
+  // useEffect(() => {
+  //   window.localStorage.setItem('products', JSON.stringify(items))
+  //   setItems(JSON.parse(localStorage.getItem(items)))
+  // }, 
+  // []);
 
   return (
     <div className="container">
@@ -70,6 +83,9 @@ const App = () => {
              )}
              </div>
           <div className="flex-large">
+          <button onClick={() => {loadSampleProducts(items)}}>
+            Load Sample Products
+            </button>
             <h2>View List</h2>
             <GroceryList 
               items={items} 
