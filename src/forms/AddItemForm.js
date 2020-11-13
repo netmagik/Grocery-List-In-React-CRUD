@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const AddItemForm = (props) => {
-    const intitialFormState = {id: null, name: '', quantity: ''}
+    const intitialFormState = {id: `${Date.now()}`, name: '', quantity: ''}
 
     const [item, setItem] = useState(intitialFormState);
 

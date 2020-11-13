@@ -18,7 +18,7 @@ const App = () => {
 
   const initialFormState = { id: null, name: '', quantity: ''};
 
-  const [items, setItems] = useState(groceryData);
+  const [items, setItems] = useState(initialFormState);
   const [editing, setEditing] = useState(false);
   const [currentItem, setCurrentItem]= useState(initialFormState);
   
@@ -38,7 +38,6 @@ const App = () => {
 
   // Add Item
   const addItem = (item) => {
-    item.id = items.length + 1
     setItems([...items, item])
   }
 
@@ -51,8 +50,8 @@ const App = () => {
 
   // Load Products
   const loadSampleProducts = () => {
-    const newItems = items.concat(sampleProducts)
-    setItems(newItems);
+    // const newItems = items.concat(sampleProducts)
+    setItems(sampleProducts);
   }
 
   // useEffect(() => {
