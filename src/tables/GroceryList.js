@@ -1,8 +1,6 @@
 import React from 'react';
-import {uid} from 'react-uid';
 
 const GroceryList = (props) => {
- // const initialState = () => window.localStorage.getItem('products') || '';
 
     return (
     <table>
@@ -16,7 +14,7 @@ const GroceryList = (props) => {
         <tbody>
             {props.items.length > 0 ? (
                 props.items.map((item) => (
-                    <tr key={uid(item)}>
+                    <tr key={item.id}>
                         <td>{item.name}</td>
                         <td>{item.quantity}</td>
                         <td>

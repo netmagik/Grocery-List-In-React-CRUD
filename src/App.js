@@ -5,16 +5,6 @@ import EditItemForm from './forms/EditItemForm';
 import sampleProducts from './sample-products';
 
 const App = () => {
-  const groceryData = [
-    {id: 1, name: 'Bread', quantity: 2},
-    {id: 2, name: 'Butter', quantity: 1},
-    {id: 3, name: 'Milk', quantity: 1},
-    {id: 4, name: 'Cheese', quantity: 1},
-    {id: 5, name: 'Eggs', quantity: 1},
-    {id: 6, name: 'Yogurt', quantity: 4},
-    {id: 7, name: 'Granola', quantity: 1},
-
-  ]
 
   const initialFormState = { id: null, name: '', quantity: ''};
 
@@ -38,7 +28,11 @@ const App = () => {
 
   // Add Item
   const addItem = (item) => {
+    if (items.length > 0) {
     setItems([...items, item])
+    } else {
+      setItems([item]);
+    }
   }
 
 
@@ -50,8 +44,11 @@ const App = () => {
 
   // Load Products
   const loadSampleProducts = () => {
-    // const newItems = items.concat(sampleProducts)
-    setItems(sampleProducts);
+    if (items.length > 0) { 
+      setItems(items => [...new Set([...items, ...sampleProducts])])
+    } else {
+    setItems(sampleProducts)
+    };
   }
 
   // useEffect(() => {
