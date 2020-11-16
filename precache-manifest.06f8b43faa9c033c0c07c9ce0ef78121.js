@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4ef1f0b592fa43d9549d56737fd8f8ad",
+    "revision": "db9ac9b4aea2d12c98424018a0906973",
     "url": "/Grocery-List-In-React-CRUD/index.html"
   },
   {
-    "revision": "1c22c43788625721d87d",
+    "revision": "1ce5be873dce285a6dea",
     "url": "/Grocery-List-In-React-CRUD/static/css/main.8a18c7c4.chunk.css"
   },
   {
-    "revision": "204fd38ecbfef489f9ff",
-    "url": "/Grocery-List-In-React-CRUD/static/js/2.98af9e5a.chunk.js"
+    "revision": "8cf1b37b21b5da4cfc60",
+    "url": "/Grocery-List-In-React-CRUD/static/js/2.7db0a834.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/Grocery-List-In-React-CRUD/static/js/2.98af9e5a.chunk.js.LICENSE.txt"
+    "url": "/Grocery-List-In-React-CRUD/static/js/2.7db0a834.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1c22c43788625721d87d",
-    "url": "/Grocery-List-In-React-CRUD/static/js/main.49f43a28.chunk.js"
+    "revision": "1ce5be873dce285a6dea",
+    "url": "/Grocery-List-In-React-CRUD/static/js/main.f8bac3a6.chunk.js"
   },
   {
     "revision": "8f89d9431dd4cbbb6625",
