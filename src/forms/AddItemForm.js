@@ -32,7 +32,7 @@ const AddItemForm = (props) => {
             />
             <label>Quantity</label>
             <input 
-            type="number" 
+            type="number" min="1"
             name="quantity" 
             value={item.quantity}
             onChange={handleInputChange}
