@@ -29,7 +29,7 @@ const App = () => {
   // Add Item
   const addItem = (item) => {
     if (items.length > 0) {
-    setItems([...items, item])
+    setItems([item, ...items])
     } else {
       setItems([item]);
     }
